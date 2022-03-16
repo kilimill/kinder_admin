@@ -1,0 +1,102 @@
+.form
+  border-radius 6px
+  bgc white
+  c #4a4a4a
+  pos relative
+  width 100%
+  max-width 520px
+  fs 16px
+  &__wrapper
+    display flex
+    justify-content space-between
+    align-items center
+  &__header
+    df(center, flex-start)
+    border-bottom 1px solid rgba(24,28,33,.06)
+    &-title
+      df(center, )
+      c #363636
+      font-weight 700
+      padding .75rem
+    &-icon
+      df(center, center)
+      size 1.5rem
+  &__content
+    padding 1.5rem
+  &__field:not(:last-child)
+    mb .75rem
+  &__label
+    c #363636
+    db()
+    fs 1rem
+    font-weight 700
+    &_error
+      c #ff3860
+    &:not(:last-child)
+      mb .5em
+  &__input
+    &:not(&_file)
+      size 100% 2.25em
+      font-size 1rem
+      padding calc(.375em - 1px) calc(.625em - 1px)
+      bgc #fff
+      border 1px solid #dbdbdb
+      border-radius 4px
+      c #363636
+      transition .4s border-color
+      &:not([readonly]):focus,
+      &:not([readonly]):active
+        border-color #3273dc
+    &_file
+      bgc #fff
+      border 1px solid #dbdbdb
+      border-radius 4px
+      c #363636
+      padding calc(.375em - 1px) calc(.625em - 1px)
+      cursor pointer
+  &__textarea
+    size 100% 8.25em
+    font-size 1rem
+    padding calc(.375em - 1px) calc(.625em - 1px)
+    bgc #fff
+    border 1px solid #dbdbdb
+    border-radius 4px
+    c #363636
+    transition .4s border-color
+    resize none
+    // oh()
+    &:focus,
+    &:active
+      border-color #3273dc
+  hr
+    margin 1.5rem -1.5rem
+    h 1px
+    border 0
+    db()
+    bgc #f5f5f5
+
+.input__file-icon-wrapper 
+  height 100%
+  width 3rem
+  display flex
+  align-items center
+  justify-content center
+  border-right 1px solid #fff
+  pos relative
+  &::before
+    content ''
+    width 1rem
+    height 1rem
+    object-fit cover
+    pos absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 64 64' enable-background='new 0 0 64 64' class=''%3E%3Cg%3E%3Cg%3E%3Cg fill='%231D1D1B'%3E%3Cpath d='M64,41.733c0-1.345-1.089-2.435-2.435-2.435c-1.347,0-2.436,1.09-2.436,2.435v14.115H4.946V41.733 c0-1.345-1.089-2.435-2.437-2.435c-1.346,0-2.435,1.09-2.435,2.435v15.535c0,0.18,0.067,0.338,0.103,0.507 c-0.035,0.169-0.103,0.328-0.103,0.507c0,1.345,1.089,2.436,2.435,2.436h59.056c1.346,0,2.435-1.091,2.435-2.436 c0-0.179-0.064-0.338-0.102-0.507C63.936,57.606,64,57.448,64,57.269V41.733z' data-original='%23000000' class='active-path' data-old_color='%23000000' fill='%23FFFFFF'/%3E%3Cpath d='m32.19,2.967c-1.346,0-2.437,1.091-2.437,2.436v35.576l-10.605-10.607c-0.951-0.951-2.492-0.951-3.443,0s-0.951,2.493 0,3.444l14.764,14.764c0.475,0.476 1.099,0.713 1.722,0.713 0.622,0 1.245-0.238 1.722-0.713l14.764-14.764c0.951-0.951 0.951-2.493 0-3.444-0.952-0.951-2.493-0.951-3.443,0l-10.609,10.607v-35.576c0-1.345-1.089-2.436-2.435-2.436z' data-original='%23000000' class='active-path' data-old_color='%23000000' fill='%23FFFFFF'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A")
+ 
+.input__file-button-text 
+  line-height 1
+  margin-top 1px
+  ml vw(7)
+  margin-right vw(5)
+  white-space nowrap
